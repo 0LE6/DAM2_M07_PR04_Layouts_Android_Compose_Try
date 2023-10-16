@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -16,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cat.institutmontilivi.DAM2_M07_Layouts_Android_Compose.ui.theme.DAM2_M07_Layouts_Android_ComposeTheme
@@ -37,6 +39,7 @@ class LiniaDeBotons : ComponentActivity() {
     }
 }
 
+@Preview (showSystemUi = true)
 @Composable
 fun Botons() {
     Column(
@@ -48,30 +51,30 @@ fun Botons() {
     ){
         Row(
             modifier = Modifier
-                .padding(30.dp)
-
+                .padding(18.dp)
                 .background(Color.LightGray)
-
-            ,
+                .fillMaxWidth(),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
         ){
-            Text(text = "Primer botó",
-                modifier = Modifier
-                    .padding(15.dp)
-                    .background(Color.Red)
-
-            )
-            Text(text = "Segon botó",
-                modifier = Modifier
-                    .padding(15.dp)
-                    .background(Color.Green)
-            )
-            Text(text = "Tercer botó",
-                modifier = Modifier
-                    .padding(15.dp)
-                    .background(Color.Magenta))
+            Boto("Primer\n botó")
+            Boto("Segon\n botó")
+            Boto("Tercer\n botó")
         }
+    }
+}
+
+
+@Composable
+fun Boto(nomBoto:String) {
+    Column (
+    ){
+        Text(text = nomBoto,
+            modifier = Modifier
+                .padding(15.dp)
+                .background(Color.Magenta),
+            textAlign = TextAlign.Center
+        )
     }
 }
 

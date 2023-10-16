@@ -7,6 +7,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -18,9 +19,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import cat.institutmontilivi.DAM2_M07_Layouts_Android_Compose.ui.theme.DAM2_M07_Layouts_Android_ComposeTheme
 
 class Calculadora : ComponentActivity() {
@@ -44,115 +47,171 @@ class Calculadora : ComponentActivity() {
 @Composable
 fun CalculadoraComposable() {
 
-    Column (
+    Column( //primera columna
         modifier = Modifier
-            .fillMaxSize()
-            .background(Color.Black)
-    ) {
-        Resultado()
-        ColumnTeclas()
+            .background(Color.DarkGray)
+            .fillMaxSize(1f)
 
-    }
-
-}
-
-@Composable
-fun ColumnTeclas() {
-
-    Column (
-
-    )
-    {
-        Column (
+    ){
+        Row( //row1 dentro de la primera columna
             modifier = Modifier
-                .weight(0.75F)
-        )
-        {
-            // 1a linea de teclas
-            Row (
+                .fillMaxWidth(1f)
+                .padding(15.dp)
+                .background(Color.LightGray)
+            ,
+            horizontalArrangement = Arrangement.End
+
+        ){
+            Text(text="1.10",
+                color = Color.DarkGray,
+                fontSize=30.sp,
                 modifier = Modifier
-                    .weight(0.25F)
+                    .padding(5.dp)
             )
-            {
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "1")
+        }
+        Row( // row2 dentro de la primera columna
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(15.dp)
+                .background(Color.DarkGray)
+
+        )  {
+
+            Column( // columna 1 dentro de la row2
+                modifier = Modifier
+                    .weight(1f),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ){
+                Row(
+                    modifier = Modifier
+                        .weight(1f)
+                        .background(Color.DarkGray)
+                    ,
+                    horizontalArrangement = Arrangement.Center,
+
+
+                    ){
+                    Column(
+                        modifier = Modifier
+                            .background(Color.DarkGray)
+                            .weight(1f)
+                    ){
+
+                        Button(onClick = {}, modifier = Modifier
+                            .fillMaxSize()
+                            .weight(1f)
+                            .padding(10.dp)
+                            .background(Color.Magenta),shape=RectangleShape)
+                        {
+                            Text(text="1", color = Color.White)
+                        }
+                        Button(onClick = {}, modifier = Modifier
+                            .fillMaxSize()
+                            .weight(1f)
+                            .padding(10.dp), shape=RectangleShape){
+                            Text(text="4", color = Color.White)
+                        }
+                        Button(onClick = {}, modifier = Modifier
+                            .fillMaxSize()
+                            .weight(1f)
+                            .padding(10.dp), shape=RectangleShape){
+                            Text(text="7", color = Color.White)
+                        }
+                    }
+                    Column(
+                        modifier = Modifier
+                            .background(Color.DarkGray)
+                            .weight(1f)
+                    ){
+
+                        Button(onClick = {}, modifier = Modifier
+                            .fillMaxSize()
+                            .weight(1f)
+                            .padding(10.dp), shape=RectangleShape){
+                            Text(text="2", color = Color.White)
+                        }
+                        Button(onClick = {}, modifier = Modifier
+                            .fillMaxWidth()
+                            .weight(1f)
+                            .padding(10.dp), shape=RectangleShape){
+                            Text(text="5", color = Color.White)
+                        }
+                        Button(onClick = {}, modifier = Modifier
+                            .fillMaxSize()
+                            .weight(1f)
+                            .padding(10.dp), shape=RectangleShape){
+                            Text(text="8", color = Color.White)
+                        }
+                    }
+                    Column(
+                        modifier = Modifier
+                            .background(Color.DarkGray)
+                            .weight(1f)
+                    ){
+
+                        Button(onClick = {}, modifier = Modifier
+                            .fillMaxSize()
+                            .weight(1f)
+                            .padding(10.dp), shape=RectangleShape){
+                            Text(text="3", color = Color.White)
+                        }
+                        Button(onClick = {}, modifier = Modifier
+                            .fillMaxSize()
+                            .weight(1f)
+                            .padding(10.dp), shape=RectangleShape){
+                            Text(text="6", color = Color.White)
+                        }
+                        Button(onClick = {}, modifier = Modifier
+                            .fillMaxSize()
+                            .weight(1f)
+                            .padding(10.dp), shape=RectangleShape){
+                            Text(text="9", color = Color.White)
+                        }
+                    }
+
+
                 }
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "2")
+                Row( // row del número 0
+                    modifier = Modifier
+                        .background(Color.DarkGray)
+                        .weight(0.25f)
+                ){
+                    Button(onClick = {}, modifier = Modifier
+                        .fillMaxSize()
+                        .weight(1f)
+                        .padding(10.dp), shape=RectangleShape){
+                        Text(text="0", color = Color.White)
+                    }
                 }
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "3")
-                }
+
             }
 
-            // 2a linea de teclas
-            Row (
+            Column( // columna 2 dentro de la row2, botones de la derecha (verticales)
                 modifier = Modifier
-                    .weight(0.25F)
-            )
-            {
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "4")
+                    .fillMaxHeight()
+                    .weight(.25f)
+                    .background(Color.DarkGray)
+            ){
+                Button(onClick = {}, modifier = Modifier
+                    .fillMaxSize()
+                    .weight(1f)
+                    .padding(10.dp), shape=RectangleShape){
+                    Text(text="C", color = Color.White)
                 }
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "5")
+                Button(onClick = {}, modifier = Modifier
+                    .fillMaxSize()
+                    .weight(1f)
+                    .padding(10.dp), shape=RectangleShape){
+                    Text(text="+", color = Color.White)
                 }
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "6")
-                }
-            }
-
-            // 3a linea de teclas
-            Row (
-                modifier = Modifier
-                    .weight(0.25F)
-            )
-            {
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "7")
-                }
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "8")
-                }
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "9")
-                }
-            }
-
-            // 4a linea, el Zero
-            Row (
-                modifier = Modifier
-                    .weight(0.25F)
-            )
-            {
-                Button(onClick = { /*TODO*/ }) {
-                    Text(text = "0")
+                Button(onClick = {}, modifier = Modifier
+                    .fillMaxSize()
+                    .weight(1f)
+                    .padding(10.dp), shape=RectangleShape){
+                    Text(text="=", color = Color.White)
                 }
             }
         }
-
-
-
-
-    }
-
-}
-
-@Composable
-fun Resultado() {
-
-    Row (
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(Color.Gray)
-            .padding(20.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.End
-    )
-    {
-        Text(text = "1.10",
-            textAlign = TextAlign.End,
-            color = Color.White
-        )
     }
 }
+
