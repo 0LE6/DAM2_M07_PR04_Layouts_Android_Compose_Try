@@ -22,25 +22,16 @@ class Formulari : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting2("Android")
+                    FormulariColumn()
                 }
             }
         }
     }
 }
 
+@Preview (showSystemUi = true)
 @Composable
-fun Greeting2(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+fun FormulariColumn() {
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview2() {
-    DAM2_M07_Layouts_Android_ComposeTheme {
-        Greeting2("Android")
-    }
+
 }
