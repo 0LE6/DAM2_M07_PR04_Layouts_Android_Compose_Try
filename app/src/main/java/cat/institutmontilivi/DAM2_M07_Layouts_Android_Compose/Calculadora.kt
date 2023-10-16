@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -34,7 +35,7 @@ class Calculadora : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.primary
                 ) {
                     CalculadoraComposable()
                 }
@@ -63,7 +64,7 @@ fun CalculadoraComposable() {
 
         ){
             Text(text="1.10",
-                color = Color.DarkGray,
+                color = Color(0xFFC26E09),
                 fontSize=30.sp,
                 modifier = Modifier
                     .padding(5.dp)
@@ -73,7 +74,6 @@ fun CalculadoraComposable() {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(15.dp)
-                .background(Color.DarkGray)
 
         )  {
 
@@ -85,7 +85,7 @@ fun CalculadoraComposable() {
                 Row(
                     modifier = Modifier
                         .weight(1f)
-                        .background(Color.DarkGray)
+
                     ,
                     horizontalArrangement = Arrangement.Center,
 
@@ -93,28 +93,31 @@ fun CalculadoraComposable() {
                     ){
                     Column(
                         modifier = Modifier
-                            .background(Color.DarkGray)
                             .weight(1f)
                     ){
 
                         Button(onClick = {}, modifier = Modifier
                             .fillMaxSize()
                             .weight(1f)
-                            .padding(10.dp)
-                            .background(Color.Magenta),shape=RectangleShape)
+                            .padding(10.dp),
+                            colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                            shape=RectangleShape)
                         {
                             Text(text="1", color = Color.White)
                         }
                         Button(onClick = {}, modifier = Modifier
                             .fillMaxSize()
                             .weight(1f)
-                            .padding(10.dp), shape=RectangleShape){
+                            .padding(10.dp),
+                            colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                            shape=RectangleShape){
                             Text(text="4", color = Color.White)
                         }
                         Button(onClick = {}, modifier = Modifier
                             .fillMaxSize()
                             .weight(1f)
-                            .padding(10.dp), shape=RectangleShape){
+                            .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                            shape=RectangleShape){
                             Text(text="7", color = Color.White)
                         }
                     }
@@ -126,19 +129,22 @@ fun CalculadoraComposable() {
                         Button(onClick = {}, modifier = Modifier
                             .fillMaxSize()
                             .weight(1f)
-                            .padding(10.dp), shape=RectangleShape){
+                            .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                            shape=RectangleShape){
                             Text(text="2", color = Color.White)
                         }
                         Button(onClick = {}, modifier = Modifier
                             .fillMaxWidth()
                             .weight(1f)
-                            .padding(10.dp), shape=RectangleShape){
+                            .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                            shape=RectangleShape){
                             Text(text="5", color = Color.White)
                         }
                         Button(onClick = {}, modifier = Modifier
                             .fillMaxSize()
                             .weight(1f)
-                            .padding(10.dp), shape=RectangleShape){
+                            .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                            shape=RectangleShape){
                             Text(text="8", color = Color.White)
                         }
                     }
@@ -151,19 +157,22 @@ fun CalculadoraComposable() {
                         Button(onClick = {}, modifier = Modifier
                             .fillMaxSize()
                             .weight(1f)
-                            .padding(10.dp), shape=RectangleShape){
+                            .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                            shape=RectangleShape){
                             Text(text="3", color = Color.White)
                         }
                         Button(onClick = {}, modifier = Modifier
                             .fillMaxSize()
                             .weight(1f)
-                            .padding(10.dp), shape=RectangleShape){
+                            .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                            shape=RectangleShape){
                             Text(text="6", color = Color.White)
                         }
                         Button(onClick = {}, modifier = Modifier
                             .fillMaxSize()
                             .weight(1f)
-                            .padding(10.dp), shape=RectangleShape){
+                            .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                            shape=RectangleShape){
                             Text(text="9", color = Color.White)
                         }
                     }
@@ -178,7 +187,8 @@ fun CalculadoraComposable() {
                     Button(onClick = {}, modifier = Modifier
                         .fillMaxSize()
                         .weight(1f)
-                        .padding(10.dp), shape=RectangleShape){
+                        .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                        shape=RectangleShape){
                         Text(text="0", color = Color.White)
                     }
                 }
@@ -194,19 +204,22 @@ fun CalculadoraComposable() {
                 Button(onClick = {}, modifier = Modifier
                     .fillMaxSize()
                     .weight(1f)
-                    .padding(10.dp), shape=RectangleShape){
+                    .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                    shape=RectangleShape){
                     Text(text="C", color = Color.White)
                 }
                 Button(onClick = {}, modifier = Modifier
                     .fillMaxSize()
                     .weight(1f)
-                    .padding(10.dp), shape=RectangleShape){
+                    .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                    shape=RectangleShape){
                     Text(text="+", color = Color.White)
                 }
                 Button(onClick = {}, modifier = Modifier
                     .fillMaxSize()
                     .weight(1f)
-                    .padding(10.dp), shape=RectangleShape){
+                    .padding(10.dp), colors = ButtonDefaults.buttonColors(Color(0xFFC26E09)),
+                    shape=RectangleShape){
                     Text(text="=", color = Color.White)
                 }
             }
