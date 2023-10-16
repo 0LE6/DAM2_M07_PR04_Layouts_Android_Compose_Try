@@ -116,7 +116,8 @@ fun FormulariColumn() {
                 ButtonDefaults.buttonColors
                     (Color.LightGray)
             ) {
-                Text("Confirma", color = Color.Black)
+                Text("Confirma",
+                    color = Color.Black)
             }
             Button(
                 onClick = {}, modifier = Modifier,
