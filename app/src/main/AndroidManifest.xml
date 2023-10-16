@@ -13,6 +13,11 @@
         android:theme="@style/Theme.DAM2_M07_Layouts_Android_Compose"
         tools:targetApi="31">
         <activity
+            android:name=".DosScrolls"
+            android:exported="false"
+            android:label="@string/title_activity_dos_scrolls"
+            android:theme="@style/Theme.DAM2_M07_Layouts_Android_Compose" />
+        <activity
             android:name=".BotonsColors"
             android:exported="false"
             android:label="@string/title_activity_botons_colors"

@@ -52,9 +52,7 @@ fun DibuixColumn() {
             modifier = Modifier
                 .padding(10.dp)
                 .weight(0.5f)
-                // .width(64.dp)
                 .scale(1F)
-                //.clip(shape= CircleShape)
                 .fillMaxSize()
         )
         LazyColumn(modifier = Modifier

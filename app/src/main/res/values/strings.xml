@@ -5,4 +5,5 @@
     <string name="title_activity_linia_de_botons">LiniaDeBotons</string>
     <string name="title_activity_dibuix">Dibuix</string>
     <string name="title_activity_botons_colors">BotonsColors</string>
+    <string name="title_activity_dos_scrolls">DosScrolls</string>
 </resources>
