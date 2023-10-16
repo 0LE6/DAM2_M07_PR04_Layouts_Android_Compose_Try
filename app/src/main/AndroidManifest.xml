@@ -13,6 +13,11 @@
         android:theme="@style/Theme.DAM2_M07_Layouts_Android_Compose"
         tools:targetApi="31">
         <activity
+            android:name=".LiniaDeBotons"
+            android:exported="false"
+            android:label="@string/title_activity_linia_de_botons"
+            android:theme="@style/Theme.DAM2_M07_Layouts_Android_Compose" />
+        <activity
             android:name=".Formulari"
             android:exported="false"
             android:label="@string/title_activity_formulari"

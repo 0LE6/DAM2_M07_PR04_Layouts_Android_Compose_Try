@@ -2,4 +2,5 @@
     <string name="app_name">DAM2_M07_Layouts_Android_Compose</string>
     <string name="title_activity_calculadora">Calculadora</string>
     <string name="title_activity_formulari">Formulari</string>
+    <string name="title_activity_linia_de_botons">LiniaDeBotons</string>
 </resources>
