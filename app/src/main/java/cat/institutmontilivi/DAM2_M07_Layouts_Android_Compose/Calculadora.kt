@@ -118,8 +118,7 @@ fun CalculadoraComposable() {
                             Text(text="7", color = Color.White)
                         }
                     }
-                    Column(
-                        modifier = Modifier
+                    Column(modifier = Modifier
                             .background(Color.DarkGray)
                             .weight(1f)
                     ){
