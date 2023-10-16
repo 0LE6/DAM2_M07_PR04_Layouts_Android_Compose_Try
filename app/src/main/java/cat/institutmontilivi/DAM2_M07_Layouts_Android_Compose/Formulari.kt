@@ -106,7 +106,8 @@ fun FormulariColumn() {
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceAround
+            horizontalArrangement =
+            Arrangement.SpaceAround
         ) {
             Button(
                 onClick = {}, modifier = Modifier,
