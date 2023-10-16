@@ -3,4 +3,6 @@
     <string name="title_activity_calculadora">Calculadora</string>
     <string name="title_activity_formulari">Formulari</string>
     <string name="title_activity_linia_de_botons">LiniaDeBotons</string>
+    <string name="title_activity_dibuix">Dibuix</string>
+    <string name="title_activity_botons_colors">BotonsColors</string>
 </resources>
